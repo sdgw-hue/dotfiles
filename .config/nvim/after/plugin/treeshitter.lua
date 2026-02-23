@@ -3,13 +3,6 @@ require('nvim-treesitter').install {
     'php',
     'typescript',
     'javascript',
-    'lua',
-    'c',
-    'vim',
-    'vimdoc',
-    'query',
-    'markdown',
-    'markdown_inline',
-    'bash'
+    'bash',
 }
 
