@@ -13,4 +13,12 @@
 !.config/rofi/
 !.config/fontconfig/
 !.config/swaync/
+!.config/bat/
+
 !.Xresources
+
+!.gnupg/
+.gnupg/*
+!.gnupg/gpg-agent.conf
+
+!.dosbox/
