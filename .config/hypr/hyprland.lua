@@ -245,10 +245,11 @@ local main_mod = 'ALT' -- Sets 'Windows' key as main modifier
 -- Example binds, see https://wiki.hypr.land/Configuring/Basics/Binds/ for more
 hl.bind(main_mod .. ' + RETURN', hl.dsp.exec_cmd(terminal))
 hl.bind(main_mod .. '+ SHIFT + Q', hl.dsp.window.close())
-hl.bind(main_mod .. " + M",
-    hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+-- hl.bind(main_mod .. " + M",
+--     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(main_mod .. ' + E', hl.dsp.exec_cmd(file_manager))
 hl.bind(main_mod .. ' + T', hl.dsp.window.float({ action = 'toggle' }))
+hl.bind(main_mod .. ' + F', hl.dsp.window.fullscreen())
 hl.bind(main_mod .. ' + R', hl.dsp.exec_cmd(menu))
 hl.bind('XF86Search', hl.dsp.exec_cmd(menu))
 hl.bind(main_mod .. ' + SHIFT + P', hl.dsp.window.pin())
@@ -268,10 +269,12 @@ for i = 1, 10 do
 end
 
 -- Resize
-hl.bind(main_mod .. ' + P', hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
-hl.bind(main_mod .. ' + U', hl.dsp.window.resize({ x = -10, y = 0, relative = true }))
-hl.bind(main_mod .. ' + O', hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
-hl.bind(main_mod .. ' + I', hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
+hl.bind(main_mod .. ' + P', hl.dsp.window.resize({ x = 20, y = 0, relative = true }), { locked = true, repeating = true })
+hl.bind(main_mod .. ' + U', hl.dsp.window.resize({ x = -20, y = 0, relative = true }),
+    { locked = true, repeating = true })
+hl.bind(main_mod .. ' + O', hl.dsp.window.resize({ x = 0, y = -20, relative = true }),
+    { locked = true, repeating = true })
+hl.bind(main_mod .. ' + I', hl.dsp.window.resize({ x = 0, y = 20, relative = true }), { locked = true, repeating = true })
 
 -- Move window in direction
 hl.bind(main_mod .. ' + SHIFT + H', hl.dsp.window.move({ direction = 'left', group_aware = true }))
