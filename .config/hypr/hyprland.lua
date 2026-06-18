@@ -282,6 +282,9 @@ hl.bind(main_mod .. ' + SHIFT + L', hl.dsp.window.move({ direction = 'right', gr
 hl.bind(main_mod .. ' + SHIFT + K', hl.dsp.window.move({ direction = 'up', group_aware = true }))
 hl.bind(main_mod .. ' + SHIFT + J', hl.dsp.window.move({ direction = 'down', group_aware = true }))
 
+-- Toggle the split (top/side) of the current window
+hl.bind(main_mod .. ' + V', hl.dsp.layout('togglesplit'))
+
 -- Example special workspace (scratchpad)
 hl.bind(main_mod .. ' + S', hl.dsp.workspace.toggle_special('magic'))
 hl.bind(main_mod .. ' + SHIFT + S', hl.dsp.window.move({ workspace = 'special:magic' }))
