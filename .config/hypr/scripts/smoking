@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+delta=$(python3 -c 'from datetime import date as d; print((d.today() - d(2026, 5, 29)).days)')
+notify-send \
+    -h string:x-canonical-private-synchronous:sys-notify \
+    -u low \
+    -i "$HOME/.config/hypr/icons/whatsapp.jpg" \
+    -t 3000 \
+    "    Smoke Free: $delta days"
+

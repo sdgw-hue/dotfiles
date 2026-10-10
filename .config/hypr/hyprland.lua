@@ -341,6 +341,10 @@ hl.bind(main_mod .. ' + CONTROL + T', hl.dsp.exec_cmd('~/.config/hypr/scripts/ti
 hl.bind(main_mod .. ' + CONTROL + B', hl.dsp.exec_cmd('~/.config/hypr/scripts/battery'))
 
 
+-- Time smoke free
+hl.bind(main_mod .. ' + CONTROL + S', hl.dsp.exec_cmd('~/.config/hypr/scripts/smoking'))
+
+
 -- Notifications
 hl.bind(main_mod .. ' + CONTROL + N', hl.dsp.exec_cmd('swaync-client -t -sw'))
 
