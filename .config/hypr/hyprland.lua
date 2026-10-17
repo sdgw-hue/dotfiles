@@ -304,6 +304,8 @@ hl.bind('XF86AudioLowerVolume', hl.dsp.exec_cmd('~/.config/hypr/scripts/volume -
     { locked = true, repeating = true })
 hl.bind('XF86AudioMute', hl.dsp.exec_cmd('~/.config/hypr/scripts/volume --toggle'),
     { locked = true, repeating = true })
+hl.bind(main_mod .. ' + CONTROL + M', hl.dsp.exec_cmd('~/.config/hypr/scripts/volume --toggle'),
+    { locked = true, repeating = true })
 hl.bind('XF86AudioMicMute', hl.dsp.exec_cmd('~/.config/hypr/scripts/volume --toggle-mic'),
     { locked = true, repeating = true })
 hl.bind('XF86MonBrightnessUp', hl.dsp.exec_cmd('~/.config/hypr/scripts/backlight --inc'),
